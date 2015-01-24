@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>275 Project 2</title>
+   <link type="text/css" rel="stylesheet" href="./css/bootstrap.css"/>
+    
+  </head>
+<body>
+</br>
+<div class="container">
+           
+<div class="hero-unit">
+   
+
+<marquee><h1><< ==== 275 Project 2 ==== >></h1></marquee> 
+</br></br><br/>
+<div class="btn-large">
+
+<h3> Create Users </h3>
+<a href="/viewCustomers" class = "btn btn-primary">View All Users</a><br><br>
+<form action="/users" method="post">Email:<input type="text" name="emailId">fname:<input type="text" name="firstName">lname:<input type="text" name="lastName">mobileNum:<input type="text" name="mobile"><input type="Submit" value="Add User"></form><br>
+
+<h3> Create Categories </h3>
+<a href="/category" class = "btn btn-primary">View Categories</a><br><br>
+<form action="/category" method="post">Category Name:<input type="text" name="categoryName"><input type="Submit"></form><br>
+
+<h3> Create Product </h3>
+<a href="/category/1/product" class = "btn btn-primary">View Products</a><br><br>
+<form action="/category/1/product" method="post">
+productName:<input type="text" id="productname" name="productName">
+quantity:<input type="text" id="quantity" name="quantity">
+userId:<input type="text" id="userid" name="userId">
+expectedOffer:<input type="text" id=expectedoffer name="expectedOffer">
+categoryId:<input type="text" id="catid" name="categoryId">
+<input type="button" value="Add Product" onclick="createProduct()"></form><br>
+
+<h3> Create Offer </h3>
+<a href="/category/1/offer" class = "btn btn-primary">View Offers</a><br><br>
+<form action="/category/1/product/3/offer" method="post">
+productId:<input type="text" name="productId">
+buyingQty:<input type="text" name="buyingQty">
+offeredDetails:<input type="text" name="offeredDetails">
+buyerStatus:<input type="text" name="buyerStatus">
+sellerStatus:<input type="text" name="sellerStatus">
+offerExpiry:<input type="text" name="offerExpiry">
+buyerId:<input type="text" name="buyerId">
+comment:<input type="text" name="comment">
+<input type="Submit" value="Add Offer"></form><br>
+
+<br/><br/><br/>
+
+</div>
+
+ </div>
+
+<script src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascrpit">
+function createProduct(){
+var catid=document.getElementById("catid").value;
+alert("catId"+catid);
+alert("localhost:3000/category"+catid+"/");
+
+}
+
+
+</script>
+
+
+
+</script>
+
+</body>
+</div>
+
+</html>
